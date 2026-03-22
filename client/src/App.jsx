@@ -79,7 +79,7 @@ function App() {
           <li><a href="#education">Education</a></li>
           <li><a href="#certificates">Certificates</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li><a href="#resume" className="nav-resume-btn">Resume</a></li>
+          <li><a href="#resume">Resume</a></li>
         </ul>
 
         <div className="nav-actions">
@@ -92,13 +92,13 @@ function App() {
               <button className="theme-btn-v3" onClick={() => setTheme('emerald')}>Emerald Quest</button>
             </div>
           </div>
-          <button 
+          {/*<button 
             className="theme-icon-v3" 
             onClick={() => setIsDark(!isDark)}
             title={isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
           >
             <i className={`fas ${isDark ? 'fa-sun' : 'fa-moon'}`}></i>
-          </button>
+          </button>*/}
         </div>
 
       </nav>
@@ -123,7 +123,7 @@ function App() {
             </span>
           </h1>
           <p className="hero-bio-v3">
-            I'm a passionate full-stack developer committed to creating elegant, high-performance web applications and solving complex problems with modern technologies.
+            I am a passionate full-stack developer committed to creating elegant, high-performance web applications and solving complex problems with modern technologies.
           </p>
           <div className="hero-buttons-v3">
             <a href="/Sanuj CV.pdf" download className="btn-primary-v3">Download Resume <i className="fas fa-arrow-down" style={{marginLeft: '8px'}}></i></a>
