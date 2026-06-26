@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import Typewriter from 'typewriter-effect';
-import CursorAnimation from './components/CursorAnimation';
 import ParticleField from './components/ParticleField';
 import HeroScene from './components/HeroScene';
 import { SkillsBackground, ProjectsBackground, AboutBackground } from './components/SectionBackgrounds';
@@ -114,6 +113,23 @@ function App() {
     };
 
     fetchProfiles();
+
+    // Set up polling interval for real-time LeetCode updates every 15 seconds
+    const interval = setInterval(async () => {
+      try {
+        const res = await fetch(`${API_BASE}/leetcode/sanujtiwari1?nocache=true`);
+        if (res.ok) {
+          const data = await res.json();
+          if (data && !data.error) {
+            setLeetcodeData(data);
+          }
+        }
+      } catch (err) {
+        console.error('Failed to fetch real-time LeetCode data:', err);
+      }
+    }, 15000);
+
+    return () => clearInterval(interval);
   }, []);
 
   // Helper: calculate SVG circle offset
@@ -127,8 +143,6 @@ function App() {
 
   return (
     <div className="app-container">
-      {/* ANTIGRAVITY CURSOR ANIMATION */}
-      <CursorAnimation />
       {/* GLOBAL 3D PARTICLE BACKGROUND */}
       <ParticleField accentColor={accentColor} />
       {/* BACK TO TOP BUTTON */}

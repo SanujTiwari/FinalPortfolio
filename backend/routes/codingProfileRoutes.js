@@ -21,9 +21,12 @@ function setCache(key, data) {
 router.get('/leetcode/:username', async (req, res) => {
   const { username } = req.params;
   const cacheKey = `leetcode_${username}`;
+  const noCache = req.query.nocache === 'true';
 
-  const cached = getCached(cacheKey);
-  if (cached) return res.json(cached);
+  if (!noCache) {
+    const cached = getCached(cacheKey);
+    if (cached) return res.json(cached);
+  }
 
   try {
     // Use alfa-leetcode-api wrapper for reliable access
