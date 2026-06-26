@@ -1401,3 +1401,192 @@ input, textarea {
 html, body, #root {
   background-color: #000000 !important;
 }
+
+/* --- PREMIUM UI ANIMATIONS & EFFECTS --- */
+
+/* 1. Hero 3D Scene Wrapper */
+.hero-scene-wrapper {
+  flex: 1;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  max-width: 600px;
+  z-index: 2;
+}
+
+@media (max-width: 900px) {
+  .hero-v3 {
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 120px;
+    gap: 30px;
+  }
+  .hero-scene-wrapper {
+    width: 100%;
+    height: 400px;
+  }
+}
+
+/* 2. Ambient Background Glowing Blobs */
+.glowing-blob {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(140px);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.12;
+  mix-blend-mode: screen;
+  background: var(--accent-color);
+  animation: wander 25s infinite ease-in-out;
+}
+
+.blob-1 {
+  width: 450px;
+  height: 450px;
+  top: -10%;
+  left: -10%;
+  animation-duration: 25s;
+}
+
+.blob-2 {
+  width: 500px;
+  height: 500px;
+  bottom: -15%;
+  right: -10%;
+  animation-duration: 30s;
+  animation-delay: -5s;
+  opacity: 0.08;
+}
+
+.blob-3 {
+  width: 350px;
+  height: 350px;
+  top: 45%;
+  left: 45%;
+  animation-duration: 28s;
+  animation-delay: -12s;
+  opacity: 0.06;
+}
+
+@keyframes wander {
+  0% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+  33% {
+    transform: translate(100px, -80px) scale(1.15) rotate(120deg);
+  }
+  66% {
+    transform: translate(-80px, 60px) scale(0.9) rotate(240deg);
+  }
+  100% {
+    transform: translate(0, 0) scale(1) rotate(360deg);
+  }
+}
+
+/* 3. Card Hover Glossy Shine sweep */
+.profile-card-v2, .skill-cat, .project-card-v2, .education-card-v2, .cert-card-v3 {
+  position: relative;
+  overflow: hidden;
+}
+
+.profile-card-v2::after, 
+.skill-cat::after, 
+.project-card-v2::after, 
+.education-card-v2::after, 
+.cert-card-v3::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -70%;
+  width: 40%;
+  height: 200%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(25deg);
+  transition: all 0.9s cubic-bezier(0.19, 1, 0.22, 1);
+  pointer-events: none;
+  z-index: 5;
+  opacity: 0;
+}
+
+.profile-card-v2:hover::after, 
+.skill-cat:hover::after, 
+.project-card-v2:hover::after, 
+.education-card-v2:hover::after, 
+.cert-card-v3:hover::after {
+  left: 130%;
+  opacity: 1;
+}
+
+/* 4. Card Icon Micro-Animations on Hover */
+.profile-card-v2:hover .profile-header-v2 h3 i,
+.skill-cat:hover h3 i,
+.project-card-v2:hover .project-header-v2 h3 i,
+.education-card-v2:hover h3 i,
+.cert-card-v3:hover .cert-icon-v3 i {
+  animation: icon-bounce-rotate 0.65s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes icon-bounce-rotate {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.3) rotate(15deg);
+    color: var(--accent-color);
+    text-shadow: 0 0 10px var(--accent-glow);
+  }
+}
+
+/* 5. Enhanced Interactive Element Hover Scales & Glows */
+.skill-tags-v2 span {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+}
+
+.skill-tags-v2 span:hover {
+  transform: translateY(-4px) scale(1.06);
+  box-shadow: 0 8px 16px var(--accent-glow);
+  border-color: var(--accent-color);
+  color: var(--accent-color) !important;
+  background: var(--accent-glow) !important;
+}
+
+.hero-socials-v3 a {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+  display: inline-block;
+}
+
+.hero-socials-v3 a:hover {
+  transform: translateY(-5px) scale(1.15);
+  color: var(--accent-color) !important;
+  text-shadow: 0 0 15px var(--accent-glow);
+}
+
+.btn-primary-v3, 
+.btn-secondary-v3, 
+.primary-btn, 
+.secondary-btn, 
+.btn-view-profile, 
+.btn-source-code {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+}
+
+.btn-primary-v3:hover, 
+.primary-btn:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 12px 24px var(--accent-glow);
+}
+
+.btn-secondary-v3:hover, 
+.secondary-btn:hover, 
+.btn-source-code:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 12px 24px rgba(255, 255, 255, 0.1);
+  border-color: var(--accent-color);
+}

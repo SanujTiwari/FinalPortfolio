@@ -143,6 +143,11 @@ function App() {
 
   return (
     <div className="app-container">
+      {/* GLOWING AMBIENT BACKGROUND BLOBS */}
+      <div className="glowing-blob blob-1"></div>
+      <div className="glowing-blob blob-2"></div>
+      <div className="glowing-blob blob-3"></div>
+
       {/* GLOBAL 3D PARTICLE BACKGROUND */}
       <ParticleField accentColor={accentColor} />
       {/* BACK TO TOP BUTTON */}
@@ -222,7 +227,11 @@ function App() {
             <a href="https://www.linkedin.com/in/sanuj-tiwari14/" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i className="fab fa-linkedin"></i></a>
           </div>
         </div>
-        
+
+        {/* 3D SCENE ON THE RIGHT SIDE */}
+        <div className="hero-scene-wrapper reveal-right">
+          <HeroScene accentColor={accentColor} />
+        </div>
       </section>
 
 
