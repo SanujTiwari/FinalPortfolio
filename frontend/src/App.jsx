@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import Typewriter from 'typewriter-effect';
 import ParticleField from './components/ParticleField';
-import HeroScene from './components/HeroScene';
 import { SkillsBackground, ProjectsBackground, AboutBackground } from './components/SectionBackgrounds';
 import './index.css';
 
@@ -33,7 +32,7 @@ function App() {
       setScrolled(window.scrollY > 50);
       setShowBackToTop(window.scrollY > 300);
 
-      const sections = ['home', 'about', 'skills', 'projects', 'education', 'certificates', 'contact', 'resume'];
+      const sections = ['home', 'about', 'skills', 'projects', 'education', 'certificates', 'extracurricular', 'contact', 'resume'];
       let current = 'home';
       for (const section of sections) {
         const el = document.getElementById(section);
@@ -184,6 +183,7 @@ function App() {
           <li><a href="#projects" className={activeSection === 'projects' ? 'active' : ''}>Projects</a></li>
           <li><a href="#education" className={activeSection === 'education' ? 'active' : ''}>Education</a></li>
           <li><a href="#certificates" className={activeSection === 'certificates' ? 'active' : ''}>Certificates</a></li>
+          <li><a href="#extracurricular" className={activeSection === 'extracurricular' ? 'active' : ''}>Profiles</a></li>
           <li><a href="#contact" className={activeSection === 'contact' ? 'active' : ''}>Contact</a></li>
           <li><a href="#resume" className={activeSection === 'resume' ? 'active' : ''}>Resume</a></li>
         </ul>
@@ -228,11 +228,6 @@ function App() {
             <a href="https://leetcode.com/u/sanujtiwari1/" target="_blank" rel="noopener noreferrer" title="LeetCode"><i className="fas fa-code"></i></a>
             <a href="https://www.linkedin.com/in/sanuj-tiwari14/" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i className="fab fa-linkedin"></i></a>
           </div>
-        </div>
-
-        {/* 3D SCENE ON THE RIGHT SIDE */}
-        <div className="hero-scene-wrapper reveal-right">
-          <HeroScene accentColor={accentColor} />
         </div>
       </section>
 
