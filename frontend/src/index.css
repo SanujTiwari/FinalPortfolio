@@ -289,18 +289,14 @@ a {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   padding: 0 10%;
   gap: 60px;
 }
 
 .hero-content-v3 {
   flex: 1;
-  max-width: 800px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  max-width: 650px;
 }
 
 
