@@ -91,7 +91,9 @@ function App() {
   const [profilesLoading, setProfilesLoading] = useState(true);
 
   useEffect(() => {
-    const API_BASE = '/api/profiles';
+    const API_BASE = import.meta.env.VITE_API_BASE 
+      ? `${import.meta.env.VITE_API_BASE}/api/profiles` 
+      : '/api/profiles';
 
     const fetchProfiles = async () => {
       setProfilesLoading(true);
