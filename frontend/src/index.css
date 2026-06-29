@@ -1573,7 +1573,8 @@ html, body, #root {
 .primary-btn, 
 .secondary-btn, 
 .btn-view-profile, 
-.btn-source-code {
+.btn-source-code,
+.btn-view-cert-small {
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
 }
 
@@ -1589,4 +1590,23 @@ html, body, #root {
   transform: translateY(-4px) scale(1.03);
   box-shadow: 0 12px 24px rgba(255, 255, 255, 0.1);
   border-color: var(--accent-color);
+}
+
+.btn-view-cert-small {
+  font-size: 0.72rem;
+  color: var(--accent-color);
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: var(--accent-glow);
+  border: 1px solid var(--accent-color);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.btn-view-cert-small:hover {
+  background: var(--accent-color);
+  color: #000 !important;
+  transform: translateY(-2px);
 }
