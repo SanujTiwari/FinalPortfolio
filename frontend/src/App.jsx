@@ -32,7 +32,7 @@ function App() {
       setScrolled(window.scrollY > 50);
       setShowBackToTop(window.scrollY > 300);
 
-      const sections = ['home', 'about', 'skills', 'projects', 'education', 'certificates', 'extracurricular', 'contact', 'resume'];
+      const sections = ['home', 'about', 'skills', 'projects', 'education', 'training', 'extracurricular', 'contact', 'resume'];
       let current = 'home';
       for (const section of sections) {
         const el = document.getElementById(section);
@@ -182,8 +182,8 @@ function App() {
           <li><a href="#skills" className={activeSection === 'skills' ? 'active' : ''}>Skills</a></li>
           <li><a href="#projects" className={activeSection === 'projects' ? 'active' : ''}>Projects</a></li>
           <li><a href="#education" className={activeSection === 'education' ? 'active' : ''}>Education</a></li>
-          <li><a href="#certificates" className={activeSection === 'certificates' ? 'active' : ''}>Certificates</a></li>
-          <li><a href="#extracurricular" className={activeSection === 'extracurricular' ? 'active' : ''}>Profiles</a></li>
+          <li><a href="#training" className={activeSection === 'training' ? 'active' : ''}>Training</a></li>
+          <li><a href="#extracurricular" className={activeSection === 'extracurricular' ? 'active' : ''}>Coding</a></li>
           <li><a href="#contact" className={activeSection === 'contact' ? 'active' : ''}>Contact</a></li>
           <li><a href="#resume" className={activeSection === 'resume' ? 'active' : ''}>Resume</a></li>
         </ul>
@@ -439,9 +439,9 @@ function App() {
         </div>
       </section>
 
-      {/* CERTIFICATES */}
-      <section id="certificates" className="certifications-v3">
-        <h2 className="reveal-left">Certificates</h2>
+      {/* TRAINING */}
+      <section id="training" className="certifications-v3">
+        <h2 className="reveal-left">Training</h2>
         <div className="certifications-grid-v3 reveal-stagger">
           <div className="cert-card-v3">
             <div className="cert-icon-v3"><i className="fas fa-cloud"></i></div>
@@ -449,6 +449,9 @@ function App() {
               <h4>Cloud Computing – NPTEL</h4>
               <p>Certified in April 2025</p>
             </div>
+            <a href="/nptel_certificate.png" target="_blank" rel="noopener noreferrer" className="btn-view-profile" style={{ marginLeft: 'auto' }}>
+              View <i className="fas fa-external-link-alt"></i>
+            </a>
           </div>
           <div className="cert-card-v3">
             <div className="cert-icon-v3"><i className="fab fa-java"></i></div>
@@ -456,20 +459,19 @@ function App() {
               <h4>Mastering Java Training</h4>
               <p>LPU Certificate | June 2025</p>
             </div>
+            <a href="/java_certificate.png" target="_blank" rel="noopener noreferrer" className="btn-view-profile" style={{ marginLeft: 'auto' }}>
+              View <i className="fas fa-external-link-alt"></i>
+            </a>
           </div>
           <div className="cert-card-v3">
-            <div className="cert-icon-v3"><i className="fas fa-trophy"></i></div>
+            <div className="cert-icon-v3"><i className="fas fa-brain"></i></div>
             <div className="cert-info-v3">
-              <h4>5-Star Java & Python</h4>
-              <p>HackerRank Proficiency</p>
+              <h4>Master Generative AI & Tools</h4>
+              <p>Infosys Springboard | August 2025</p>
             </div>
-          </div>
-          <div className="cert-card-v3">
-            <div className="cert-icon-v3"><i className="fas fa-code"></i></div>
-            <div className="cert-info-v3">
-              <h4>150+ DSA Problems</h4>
-              <p>LeetCode & GFG Milestone</p>
-            </div>
+            <a href="/infosys_certificate.png" target="_blank" rel="noopener noreferrer" className="btn-view-profile" style={{ marginLeft: 'auto' }}>
+              View <i className="fas fa-external-link-alt"></i>
+            </a>
           </div>
         </div>
       </section>
