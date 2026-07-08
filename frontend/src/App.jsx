@@ -219,7 +219,7 @@ function App() {
             I am a passionate full-stack developer committed to creating elegant, high-performance web applications and solving complex problems with modern technologies.
           </p>
           <div className="hero-buttons-v3">
-            <a href="/Sanuj CV.pdf" download className="btn-primary-v3">Download Resume <i className="fas fa-arrow-down" style={{marginLeft: '8px'}}></i></a>
+            <a href="/SanujCV.pdf" download className="btn-primary-v3">Download Resume <i className="fas fa-arrow-down" style={{marginLeft: '8px'}}></i></a>
             <a href="#projects" className="btn-secondary-v3">View Projects</a>
           </div>
 
@@ -659,7 +659,7 @@ function App() {
         <div className="cta-content">
           <h3>Want to know more?</h3>
           <p>Click here to download my resume.</p>
-          <a href="/Sanuj CV.pdf" download className="secondary-btn">Download Resume (PDF)</a>
+          <a href="/SanujCV.pdf" download className="secondary-btn">Download Resume (PDF)</a>
         </div>
       </section>
 
